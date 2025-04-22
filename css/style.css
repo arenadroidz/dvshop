@@ -1,0 +1,172 @@
+/* css/style.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #D4AF37; /* warna emas */
+  color: #000000; /* tulisan hitam */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 60px;
+  z-index: 1000;
+}
+
+header a {
+  color: #000000; /* tulisan hitam */
+  text-decoration: none;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+}
+
+header a:hover {
+  background-color: rgba(128, 0, 0, 0.5); /* merah maroon transparan */
+  border-radius: 5px;
+}
+
+section {
+  padding: 80px 20px 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hero {
+  text-align: center;
+}
+
+.hero img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  border: 2px solid #D4AF37;
+}
+
+.social-icons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-icons a {
+  text-decoration: none;
+  font-size: 24px;
+  color: #800000;
+}
+
+.katalog, .shop, .order-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  text-align: center;
+}
+
+.katalog div, .shop div, .order-grid div {
+  border: 1px solid #333;
+  padding: 20px;
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+  transition: transform 0.3s ease;
+}
+
+.katalog img, .shop img, .order-grid img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+.katalog div:hover, .shop div:hover, .order-grid div:hover {
+  transform: scale(1.05);
+}
+
+footer {
+  background: #D4AF37; /* warna emas */
+  color: #000000; /* tulisan hitam */
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+h2 {
+  color: #D4AF37;
+}
+
+.order-grid a {
+  display: inline-block;
+  text-decoration: none;
+  color: #D4AF37;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Styling untuk galeri grid */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Membuat 2 kolom */
+  gap: 20px; /* Jarak antar elemen grid */
+  justify-items: center; /* Menengahkan konten secara horizontal */
+  margin: 20px auto; /* Margin atas dan bawah */
+  max-width: 800px; /* Lebar maksimal galeri */
+}
+
+.gallery-grid div {
+  text-align: center;
+}
+
+.gallery-grid img {
+  width: 150px; /* Ukuran gambar */
+  height: 150px; /* Ukuran gambar */
+  object-fit: cover; /* Memastikan gambar proporsional */
+  border-radius: 10px; /* Memberikan sudut melengkung */
+  border: 2px solid #D4AF37; /* Border emas */
+}
+
+.gallery-grid p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #f0f0f0; /* Warna teks putih */
+}
+
+/* CSS untuk sticky footer */
+html, body {
+  height: 100%; /* Pastikan tinggi dokumen mencakup seluruh viewport */
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+main {
+  flex: 1 0 auto; /* Konten utama akan mengambil ruang tersisa */
+}
+
+footer {
+  flex-shrink: 0; /* Footer tidak menyusut */
+  background: #D4AF37; /* Warna emas */
+  color: #000000; /* Tulisan hitam */
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
